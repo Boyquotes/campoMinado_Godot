@@ -1,0 +1,13 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://ckifgmwgl0m1h"]
+
+[ext_resource type="Texture2D" uid="uid://c8iqt0bgaagpk" path="res://pedra.png" id="1_6b1an"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bt628"]
+resource_name = "chão"
+texture = ExtResource("1_6b1an")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_bt628")
