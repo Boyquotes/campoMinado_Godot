@@ -35,6 +35,19 @@ func _on_Timer_timeout() -> void:
 	
 	if dentro:
 		get_tree().quit()
+	else:
+		timer = Timer.new()
+		add_child(timer)
+		timer.wait_time = 1.0
+		timer.one_shot = true
+		timer.connect("timeout", _on_Timer_deleteBomb)
+		timer.start()
+		
+
+func _on_Timer_deleteBomb() -> void:
+	var bomb = get_node("/root/Node2D/Bomba4")
+	bomb.queue_free()
+
 
 func _on_Timer_timeout2() -> void:
 	var node = get_node("/root/Node2D/Bomba4/Sprite2D")
